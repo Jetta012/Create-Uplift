@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,152 +8,349 @@
     <link rel="stylesheet" href="css/styles.css">
     <style>
         :root {
-            --primary-color: #f3e5f5; /* Soft pastel purple */
-            --secondary-color: #e1bee7; /* Light pastel pink */
-            --accent-color: #c5cae9; /* Soft blue */
-            --text-color: #5e35b1; /* Deep pastel purple */
+            --primary-color: #f4f4f4; /* Soft Neutral */
+            --secondary-color: #e8d5c3; /* Warm Beige */
+            --accent-color: #c69fa5; /* Mauve */
+            --text-color: #4f3a3a; /* Deep Brown */
+            --button-color: #d68c91; /* Warm Coral */
+            --button-hover-color: #b37478; /* Dark Coral */
+            --shadow-color: rgba(0, 0, 0, 0.1);
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Quicksand', sans-serif;
             background-color: var(--primary-color);
             color: var(--text-color);
             margin: 0;
             padding: 0;
         }
 
-        header, footer {
+        header {
             background-color: var(--secondary-color);
             text-align: center;
-            padding: 1rem 0;
+            padding: 1rem;
+            border-bottom: 3px solid var(--accent-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
+            header img {
+                width: 80px;
+                margin-bottom: 0.5rem;
+            }
+
+            header h1 {
+                font-size: 1.8rem;
+                color: var(--text-color);
+                font-family: 'Dancing Script', cursive;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+        nav {
+            background-color: var(--accent-color);
+            box-shadow: 0 4px 6px var(--shadow-color);
+            padding: 0.5rem 0;
         }
 
-        nav a {
-            text-decoration: none;
-            color: var(--text-color);
-        }
+            nav ul {
+                display: flex;
+                justify-content: space-around;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            nav a {
+                font-size: 1rem;
+                color: var(--text-color);
+                text-decoration: none;
+                padding: 0.5rem;
+                transition: color 0.3s;
+            }
+
+                nav a:hover {
+                    color: var(--button-color);
+                }
 
         .hero {
             text-align: center;
-            padding: 2rem;
-            background-color: var(--accent-color);
-        }
-
-        .cta-button {
-            background-color: var(--text-color);
-            color: #fff;
-            padding: 0.5rem 1rem;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .features {
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            align-items: center;
-        }
-
-        .feature-item {
-            background-color: var(--secondary-color);
-            padding: 1rem;
-            border-radius: 8px;
-            width: 80%;
-            text-align: center;
-        }
-
-        .appointment {
-            padding: 2rem;
-            text-align: center;
+            padding: 2rem 1rem;
             background-color: var(--primary-color);
+            box-shadow: 0 4px 6px var(--shadow-color);
         }
 
-        .appointment form {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            max-width: 400px;
-            margin: 0 auto;
+            .hero h2 {
+                font-size: 1.8rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
         }
 
-        .appointment input, .appointment button {
-            padding: 0.5rem;
-            font-size: 1rem;
-            border: 1px solid var(--text-color);
-            border-radius: 5px;
+        .service {
+            background-color: var(--secondary-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px var(--shadow-color);
+            text-align: center;
+            transition: transform 0.3s;
         }
 
-        .appointment button {
-            background-color: var(--text-color);
-            color: #fff;
-            cursor: pointer;
+            .service:hover {
+                transform: scale(1.05);
+            }
+
+            .service h3 {
+                font-size: 1.2rem;
+                margin-bottom: 0.5rem;
+            }
+
+        .order-status, .cart-section, .categories {
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: var(--secondary-color);
+            border-radius: 8px;
+            width: 90%;
+            box-shadow: 0 4px 6px var(--shadow-color);
+            text-align: center;
         }
+
+            .order-status input {
+                margin: 0.5rem 0;
+                padding: 0.5rem;
+                width: 80%;
+                border-radius: 4px;
+                border: 1px solid var(--accent-color);
+            }
+
+            .cart-section table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 1rem;
+            }
+
+            .cart-section th, .cart-section td {
+                padding: 0.5rem;
+                text-align: left;
+                border: 1px solid var(--accent-color);
+            }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            padding: 1rem;
+        }
+
+            .categories img {
+                width: 100%;
+                border-radius: 8px;
+                transition: transform 0.3s;
+            }
+
+                .categories img:hover {
+                    transform: scale(1.05);
+                }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: var(--accent-color);
+            padding: 0.5rem 0;
+            box-shadow: 0 -4px 6px var(--shadow-color);
+            z-index: 1000;
+        }
+
+            .bottom-nav ul {
+                display: flex;
+                justify-content: space-around;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .bottom-nav a {
+                font-size: 1rem;
+                color: var(--text-color);
+                text-decoration: none;
+                padding: 0.5rem;
+                transition: color 0.3s;
+            }
+
+                .bottom-nav a:hover {
+                    color: var(--button-color);
+                }
+
+        footer {
+            background-color: var(--secondary-color);
+            text-align: center;
+            padding: 1rem;
+            border-top: 3px solid var(--accent-color);
+        }
+
+            footer p {
+                font-size: 0.9rem;
+            }
+
+            footer a {
+                text-decoration: none;
+                color: var(--text-color);
+            }
     </style>
 </head>
+
 <body>
-    <!-- Header Section -->
     <header>
-        <div class="logo">
-            <img src="images/logo.png" alt="Create and Uplift Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="checkout.html">Checkout</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <img src="images/logo.png" alt="Create and Uplift Logo">
+        <h1>Create and Uplift</h1>
+        <p>Tailored Branding and Marketing Solutions</p>
     </header>
 
-    <!-- Main Content Section -->
-    <main>
-        <section class="hero">
-            <h1>Welcome to Create and Uplift</h1>
-            <p>Empowering brands with innovative designs and strategies.</p>
-            <a href="services.html" class="cta-button">Explore Our Services</a>
-        </section>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="small-business-portal.html">Small Business Portal</a></li>
+            <li><a href="cart.html">Shopping Cart</a></li>
+        </ul>
+    </nav>
 
-        <section class="features">
-            <h2>What We Offer</h2>
-            <div class="feature-item">
-                <h3>Logo Design</h3>
-                <p>Create a memorable brand identity with custom logo designs.</p>
-            </div>
-            <div class="feature-item">
-                <h3>Website Creation</h3>
-                <p>Responsive and user-friendly websites tailored to your needs.</p>
-            </div>
-            <div class="feature-item">
-                <h3>Social Media Management</h3>
-                <p>Enhance your online presence with expert social media strategies.</p>
-            </div>
-        </section>
+    <div class="hero">
+        <h2>Welcome to Create and Uplift</h2>
+        <p>Your one-stop solution for branding, marketing, and creative design needs.</p>
+    </div>
 
-        <section class="appointment">
-            <h2>Schedule Appointment Reminders</h2>
-            <form>
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <input type="date" name="appointment-date" required>
-                <input type="time" name="appointment-time" required>
-                <button type="submit">Set Reminder</button>
-            </form>
-        </section>
-    </main>
+    <section class="services">
+        <div class="service">
+            <h3>Logo Design</h3>
+            <p>Stand out with a custom logo designed to reflect your brand’s unique identity and values.</p>
+        </div>
+        <div class="service">
+            <h3>Website Creation</h3>
+            <p>Build a sleek, modern, and responsive website tailored to engage your audience and drive results.</p>
+        </div>
+        <div class="service">
+            <h3>Social Media Management</h3>
+            <p>Grow your brand’s online presence with strategic social media content and audience engagement.</p>
+        </div>
+    </section>
+
+    <section class="categories">
+        <div class="category">
+            <img src="images/logo-design.jpg" alt="Logo Design">
+            <h3>Brand Identity</h3>
+            <p>Visual and strategic design to define your brand across all platforms.</p>
+        </div>
+        <div class="category">
+            <img src="images/website-creation.jpg" alt="Website Creation">
+            <h3>Digital Presence</h3>
+            <p>Create impactful digital experiences that represent your business goals.</p>
+        </div>
+        <div class="category">
+            <img src="images/social-media.jpg" alt="Social Media Management">
+            <h3>Content Strategy</h3>
+            <p>Professional strategies to captivate and retain your audience.</p>
+        </div>
+    </section>
+
+    <div class="order-status">
+        <h3>Check Your Order Status</h3>
+        <p>Enter your order ID to track your order:</p>
+        <input type="text" placeholder="Order ID" />
+        <button class="cta-button">Check Status</button>
+    </div>
+
+    <div class="cart-section">
+        <h3>Your Shopping Cart</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Logo Design</td>
+                    <td>1</td>
+                    <td>$80</td>
+                </tr>
+                <tr>
+                    <td>Business Card Design</td>
+                    <td>1</td>
+                    <td>$80</td>
+                </tr>
+                <tr>
+                    <td>Website Creation</td>
+                    <td>1</td>
+                    <td>$600</td>
+                </tr>
+                <tr>
+                    <td>Social Media Management</td>
+                    <td>1</td>
+                    <td>$300</td>
+                </tr>
+                <tr>
+                    <td>Brand Consultation</td>
+                    <td>1</td>
+                    <td>$200</td>
+                </tr>
+                <tr>
+                    <td>Marketing Strategy Development</td>
+                    <td>1</td>
+                    <td>$400</td>
+                </tr>
+                <tr>
+                    <td>Content Creation (Blogs, Graphics)</td>
+                    <td>1</td>
+                    <td>$150</td>
+                </tr>
+                <tr>
+                    <td>Email Campaign Management</td>
+                    <td>1</td>
+                    <td>$250</td>
+                </tr>
+                <tr>
+                    <td>SEO Optimization</td>
+                    <td>1</td>
+                    <td>$350</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><strong>Total:</strong> $2460</p>
+        <button class="cta-button">Proceed to Checkout</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Create and Uplift | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </footer>
+
+    <div class="bottom-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
 
     <!-- Footer Section -->
     <footer>
