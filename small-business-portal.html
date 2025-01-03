@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Small Business Portal</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Small Business Portal</h1>
+    </header>
+    <section>
+        <form>
+            <h2>Login</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+            <button type="submit">Login</button>
+        </form>
+        <h2>Set Appointment Reminder</h2>
+        <form>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required><br>
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required><br>
+            <label for="reminder">Notification Type:</label>
+            <select id="reminder" name="reminder">
+                <option>Email</option>
+                <option>Text</option>
+            </select><br>
+            <button type="submit">Set Reminder</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 Create and Uplift</p>
+    </footer>
+</body>
+</html>
