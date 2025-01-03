@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner with Us - Create and Uplift</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+            color: #4f3a3a;
+        }
+
+        /* Header and Navigation */
+        nav {
+            background-color: #c69fa5;
+            padding: 15px 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #d65a77, #c69fa5);
+            font-size: 14px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background: linear-gradient(135deg, #d68c91, #c69fa5);
+        }
+
+        /* Main Section */
+        section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            text-align: center;
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+        .benefits-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .benefit-card {
+            background: linear-gradient(135deg, #ffffff, #f9f4ef);
+            border: 1px solid #ddd;
+            padding: 30px;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 350px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .benefit-card h3 {
+            color: #d65a77;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .benefit-card p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .cta-section button {
+            padding: 15px 30px;
+            background-color: #d65a77;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-section button:hover {
+            background-color: #d68c91;
+        }
+
+        .form-container {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .form-container form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-container label {
+            text-align: left;
+            font-size: 1rem;
+            color: #4f3a3a;
+        }
+
+        .form-container input, .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .form-container button {
+            padding: 15px 30px;
+            background-color: #d65a77;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #d68c91;
+        }
+
+        footer {
+            background-color: #e8d5c3;
+            color: #4f3a3a;
+            text-align: center;
+            padding: 20px;
+            font-size: 16px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .benefits-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .benefit-card {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="partners.html">Partners Page</a></li>
+            <li><a href="partner-with-us.html">Partner with Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Partner with Us Section -->
+    <section>
+        <h2>Become a Partner with Create and Uplift</h2>
+        <p>Showcase your business to a wider audience and grow your brand with Create and Uplift. As a partner, you gain exclusive access to advertise your services and reach more customers through our platform.</p>
+
+        <!-- Benefits Section -->
+        <div class="benefits-container">
+            <div class="benefit-card">
+                <h3>Advertise Your Services</h3>
+                <p>Get listed on our site and showcase your services to a large, engaged audience.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Custom Pages</h3>
+                <p>Have your own dedicated page to upload your services, pricing, and promotional content.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Boost Your Visibility</h3>
+                <p>Leverage our marketing efforts to enhance your brand's reach and visibility.</p>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta-section">
+            <p><strong>Ready to take your business to the next level?</strong></p>
+            <button onclick="document.getElementById('partner-form').scrollIntoView()">Get Started</button>
+        </div>
+
+        <!-- Partner Form -->
+        <div class="form-container" id="partner-form">
+            <h2>Partner Sign-Up Form</h2>
+            <form action="#">
+                <label for="business-name">Business Name:</label>
+                <input type="text" id="business-name" name="business-name" required>
+
+                <label for="service-description">Service Description:</label>
+                <textarea id="service-description" name="service-description" rows="5" required></textarea>
+
+                <label for="services-list">Upload Services List (PDF, DOCX):</label>
+                <input type="file" id="services-list" name="services-list" accept=".pdf,.docx" required>
+
+                <button type="submit">Submit Application</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Create and Uplift | Designed with passion and precision.</p>
+    </footer>
+
+</body>
+</html>
