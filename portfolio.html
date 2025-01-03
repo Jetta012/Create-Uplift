@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Create and Uplift</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Our Portfolio</h1>
+    </header>
+    <section>
+        <h2>Our Work</h2>
+        <p>Take a look at some of our completed projects across various industries.</p>
+        <div class="tabs">
+            <button class="tab" onclick="showCategory('electronics')">Electronics</button>
+            <button class="tab" onclick="showCategory('apparel')">Apparel</button>
+            <button class="tab" onclick="showCategory('home-decor')">Home Decor</button>
+        </div>
+        <div id="electronics" class="category">
+            <h3>Electronics</h3>
+            <p>Custom branding and web solutions for electronic companies.</p>
+            <img src="images/electronics-sample.jpg" alt="Electronics project">
+        </div>
+        <div id="apparel" class="category" style="display:none;">
+            <h3>Apparel</h3>
+            <p>Creative designs for clothing brands.</p>
+            <img src="images/apparel-sample.jpg" alt="Apparel project">
+        </div>
+        <div id="home-decor" class="category" style="display:none;">
+            <h3>Home Decor</h3>
+            <p>Elegant marketing materials for home decor businesses.</p>
+            <img src="images/home-decor-sample.jpg" alt="Home Decor project">
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Create and Uplift</p>
+    </footer>
+    <script>
+        function showCategory(category) {
+            document.querySelectorAll('.category').forEach(cat => cat.style.display = 'none');
+            document.getElementById(category).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
