@@ -11,35 +11,69 @@
         <h1>Shopping Cart</h1>
     </header>
     <section>
-        <table>
-            <thead>
-                <tr>
-                    <th>Product</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Custom Logo Design</td>
-                    <td><input type="number" value="1" min="1"></td>
-                    <td>$150</td>
-                    <td><button>Remove</button></td>
-                </tr>
-                <tr>
-                    <td>Business Card Design</td>
-                    <td><input type="number" value="2" min="1"></td>
-                    <td>$50 each</td>
-                    <td><button>Remove</button></td>
-                </tr>
-            </tbody>
-        </table>
-        <p>Total: <strong>$250</strong></p>
-        <button onclick="location.href='order-confirmation.html'">Proceed to Checkout</button>
+        <form id="cart-form">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Select</th>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" class="product-checkbox" data-price="150"></td>
+                        <td>Custom Logo Design</td>
+                        <td><input type="number" value="1" min="1" class="quantity" data-price="150"></td>
+                        <td>$150</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="product-checkbox" data-price="50"></td>
+                        <td>Business Card Design</td>
+                        <td><input type="number" value="2" min="1" class="quantity" data-price="50"></td>
+                        <td>$50 each</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Total Selected: <strong id="total-amount">$0</strong></p>
+            <button type="button" onclick="proceedToPay()">Continue to Payment</button>
+        </form>
     </section>
     <footer>
         <p>&copy; 2025 Create and Uplift</p>
     </footer>
+
+    <script>
+        const checkboxes = document.querySelectorAll('.product-checkbox');
+        const quantities = document.querySelectorAll('.quantity');
+        const totalAmount = document.getElementById('total-amount');
+
+        function calculateTotal() {
+            let total = 0;
+            checkboxes.forEach((checkbox, index) => {
+                if (checkbox.checked) {
+                    const quantity = quantities[index].value;
+                    const price = parseFloat(checkbox.getAttribute('data-price'));
+                    total += quantity * price;
+                }
+            });
+            totalAmount.textContent = `$${total.toFixed(2)}`;
+        }
+
+        checkboxes.forEach(checkbox => checkbox.addEventListener('change', calculateTotal));
+        quantities.forEach(quantity => quantity.addEventListener('input', calculateTotal));
+
+        function proceedToPay() {
+            if (parseFloat(totalAmount.textContent.slice(1)) > 0) {
+                alert('Proceeding to payment page...');
+                // Replace the following line with a navigation to the payment page
+                location.href = 'order-confirmation.html';
+            } else {
+                alert('Please select at least one item to proceed.');
+            }
+        }
+    </script>
 </body>
 </html>
+
