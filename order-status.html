@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Status - Create and Uplift</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #e8d5c3;
+            color: #4f3a3a;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #c69fa5;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        nav ul li {
+            flex: 1;
+            text-align: center;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #d65a77, #c69fa5);
+            font-size: 14px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background: linear-gradient(135deg, #d68c91, #c69fa5);
+        }
+
+        .order-status {
+            margin: 50px auto;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #f9f4ef;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .order-status h2 {
+            color: #d65a77;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .order-status form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .order-status input {
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            width: 100%;
+        }
+
+        .btn-check-status {
+            background-color: #d65a77;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-check-status:hover {
+            background-color: #d68c91;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="font-family: 'Dancing Script', cursive; margin: 0; font-size: 2.5rem;">Order Status</h1>
+        <p>Track your order with ease!</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="partners.html">Partners Page</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="small-business-portal.html">Small Business Portal</a></li>
+            <li><a href="cart.html">Shopping Cart</a></li>
+            <li><a href="order-status.html">Order Status</a></li>
+            <li><a href="apply.html">Apply Now</a></li>
+        </ul>
+    </nav>
+    <section class="order-status">
+        <h2>Check Your Order Status</h2>
+        <form>
+            <label for="order-id">Enter Your Order ID:</label>
+            <input type="text" id="order-id" placeholder="Order ID">
+            <button type="submit" class="btn-check-status">Check Status</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 Create and Uplift | Designed with passion and precision.</p>
+    </footer>
+</body>
+</html>
