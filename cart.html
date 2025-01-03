@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Create and Uplift</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Shopping Cart</h1>
+    </header>
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Custom Logo Design</td>
+                    <td><input type="number" value="1" min="1"></td>
+                    <td>$150</td>
+                    <td><button>Remove</button></td>
+                </tr>
+                <tr>
+                    <td>Business Card Design</td>
+                    <td><input type="number" value="2" min="1"></td>
+                    <td>$50 each</td>
+                    <td><button>Remove</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Total: <strong>$250</strong></p>
+        <button onclick="location.href='order-confirmation.html'">Proceed to Checkout</button>
+    </section>
+    <footer>
+        <p>&copy; 2025 Create and Uplift</p>
+    </footer>
+</body>
+</html>
