@@ -28,10 +28,6 @@
             padding: 0;
         }
 
-        nav ul li {
-            text-align: center;
-        }
-
         nav ul li a {
             color: white;
             text-decoration: none;
@@ -99,29 +95,34 @@
             margin-bottom: 20px;
         }
 
-        .partner-card button {
-            padding: 15px 30px;
-            background-color: #d65a77;
-            color: white;
-            font-size: 1.1rem;
-            font-weight: bold;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .partner-card button:hover {
-            background-color: #d68c91;
-        }
-
-        /* Cart Section */
         .cart {
             margin-top: 30px;
         }
 
-        .cart label, .cart select {
+        .cart label {
             font-size: 1.1rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .cart select {
+            font-size: 1rem;
+            padding: 10px;
+            width: 100%;
+            max-width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .cart input[type="number"] {
+            width: 100%;
+            max-width: 100px;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 15px;
         }
 
         .cart button {
@@ -143,6 +144,26 @@
         .cart p {
             font-size: 1.1rem;
             margin-top: 15px;
+        }
+
+        footer {
+            background-color: #e8d5c3;
+            color: #4f3a3a;
+            text-align: center;
+            padding: 20px;
+            font-size: 16px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .partners-container {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
@@ -171,7 +192,7 @@
                 <p><strong>Services:</strong> Deep Clean, Standard Clean</p>
                 <p><strong>Pricing:</strong> $50/hr (Deep Clean), $40/hr (Standard Clean)</p>
 
-                <!-- Shopping Cart for Sacred Shine -->
+                <!-- Shopping Cart -->
                 <div class="cart">
                     <label for="sacred-service">Select Service:</label>
                     <select id="sacred-service">
@@ -179,6 +200,8 @@
                         <option value="50">Deep Clean ($50/hr)</option>
                         <option value="40">Standard Clean ($40/hr)</option>
                     </select>
+                    <label for="sacred-quantity">Quantity (hours):</label>
+                    <input type="number" id="sacred-quantity" min="1" value="1">
                     <button onclick="calculateSacredTotal()">Add to Cart</button>
                     <p>Total: $<span id="sacred-total">0</span></p>
                 </div>
@@ -187,10 +210,10 @@
             <!-- MidLife Motors Card -->
             <div class="partner-card">
                 <h3>MidLife Motors</h3>
-                <p><strong>Services:</strong> Automobile Photo Shoot, Oil Change, and More</p>
+                <p><strong>Services:</strong> Automobile Photo Shoot, Oil Change</p>
                 <p><strong>Pricing:</strong> $50 (Photo Shoot), $30 (Oil Change)</p>
 
-                <!-- Shopping Cart for MidLife Motors -->
+                <!-- Shopping Cart -->
                 <div class="cart">
                     <label for="midlife-service">Select Service:</label>
                     <select id="midlife-service">
@@ -198,6 +221,8 @@
                         <option value="50">Photo Shoot ($50)</option>
                         <option value="30">Oil Change ($30)</option>
                     </select>
+                    <label for="midlife-quantity">Quantity:</label>
+                    <input type="number" id="midlife-quantity" min="1" value="1">
                     <button onclick="calculateMidLifeTotal()">Add to Cart</button>
                     <p>Total: $<span id="midlife-total">0</span></p>
                 </div>
@@ -211,13 +236,17 @@
 
     <script>
         function calculateSacredTotal() {
-            const service = document.getElementById('sacred-service').value;
-            document.getElementById('sacred-total').innerText = service;
+            const servicePrice = parseFloat(document.getElementById('sacred-service').value);
+            const quantity = parseInt(document.getElementById('sacred-quantity').value);
+            const total = servicePrice * quantity;
+            document.getElementById('sacred-total').innerText = total || 0;
         }
 
         function calculateMidLifeTotal() {
-            const service = document.getElementById('midlife-service').value;
-            document.getElementById('midlife-total').innerText = service;
+            const servicePrice = parseFloat(document.getElementById('midlife-service').value);
+            const quantity = parseInt(document.getElementById('midlife-quantity').value);
+            const total = servicePrice * quantity;
+            document.getElementById('midlife-total').innerText = total || 0;
         }
     </script>
 
