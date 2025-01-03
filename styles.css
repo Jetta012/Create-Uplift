@@ -1,0 +1,150 @@
+/* styles.css */
+
+/* Color Variables */
+:root {
+    --primary-color: #f4f4f4; /* Soft Neutral */
+    --secondary-color: #e8d5c3; /* Warm Beige */
+    --accent-color: #c69fa5; /* Mauve */
+    --text-color: #4f3a3a; /* Deep Brown */
+    --button-color: #d68c91; /* Warm Coral */
+    --button-hover-color: #b37478; /* Dark Coral */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+}
+
+header {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 3px solid var(--accent-color);
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    border-top: 3px solid var(--accent-color);
+}
+
+h1, h2, h3 {
+    color: var(--text-color);
+}
+
+p, ul, li {
+    margin: 10px 0;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: var(--accent-color);
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--button-color);
+}
+
+/* Buttons */
+button {
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+}
+
+/* Forms */
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: var(--primary-color);
+}
+
+table th, table td {
+    border: 1px solid var(--accent-color);
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+/* Category Tabs */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    margin: 0 10px;
+    padding: 10px;
+    background-color: var(--primary-color);
+    border: 1px solid var(--accent-color);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tabs button:hover {
+    background-color: var(--secondary-color);
+}
+
+.tabs button.active {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+}
+
+/* Map Placeholder */
+#map-placeholder {
+    background-color: var(--shadow-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+}
