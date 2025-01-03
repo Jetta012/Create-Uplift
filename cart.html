@@ -7,41 +7,60 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Shopping Cart</h1>
+    <header style="background-color: #e8d5c3; color: #4f3a3a;">
+        <h1 style="font-family: 'Dancing Script', cursive;">Shopping Cart</h1>
+        <p style="font-family: 'Quicksand', sans-serif;">Review and manage your selected services.</p>
     </header>
-    <section>
+    <nav style="background-color: #c69fa5;">
+        <ul style="display: flex; justify-content: center; padding: 0; margin: 0; list-style: none;">
+            <li style="margin: 0 10px;"><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
+            <li style="margin: 0 10px;"><a href="about.html" style="color: white; text-decoration: none;">About Us</a></li>
+            <li style="margin: 0 10px;"><a href="services.html" style="color: white; text-decoration: none;">Services</a></li>
+            <li style="margin: 0 10px;"><a href="portfolio.html" style="color: white; text-decoration: none;">Portfolio</a></li>
+            <li style="margin: 0 10px;"><a href="contact.html" style="color: white; text-decoration: none;">Contact</a></li>
+            <li style="margin: 0 10px;"><a href="small-business-portal.html" style="color: white; text-decoration: none;">Small Business Portal</a></li>
+            <li style="margin: 0 10px;"><a href="cart.html" style="color: white; text-decoration: none;">Shopping Cart</a></li>
+        </ul>
+    </nav>
+    <section style="padding: 20px; font-family: 'Quicksand', sans-serif;">
+        <h2 style="color: #4f3a3a;">Your Shopping Cart</h2>
         <form id="cart-form">
-            <table>
+            <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
                 <thead>
-                    <tr>
-                        <th>Select</th>
-                        <th>Product</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
+                    <tr style="background-color: #c69fa5; color: white;">
+                        <th style="padding: 10px;">Select</th>
+                        <th style="padding: 10px;">Service</th>
+                        <th style="padding: 10px;">Quantity</th>
+                        <th style="padding: 10px;">Price</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><input type="checkbox" class="product-checkbox" data-price="150"></td>
-                        <td>Custom Logo Design</td>
-                        <td><input type="number" value="1" min="1" class="quantity" data-price="150"></td>
-                        <td>$150</td>
+                        <td><input type="checkbox" class="product-checkbox" data-price="80"></td>
+                        <td>Logo Design</td>
+                        <td><input type="number" class="quantity" value="1" min="1" style="width: 60px;"></td>
+                        <td>$80</td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" class="product-checkbox" data-price="50"></td>
-                        <td>Business Card Design</td>
-                        <td><input type="number" value="2" min="1" class="quantity" data-price="50"></td>
-                        <td>$50 each</td>
+                        <td><input type="checkbox" class="product-checkbox" data-price="600"></td>
+                        <td>Website Creation</td>
+                        <td><input type="number" class="quantity" value="1" min="1" style="width: 60px;"></td>
+                        <td>$600</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="product-checkbox" data-price="300"></td>
+                        <td>Social Media Management</td>
+                        <td><input type="number" class="quantity" value="1" min="1" style="width: 60px;"></td>
+                        <td>$300</td>
                     </tr>
                 </tbody>
             </table>
-            <p>Total Selected: <strong id="total-amount">$0</strong></p>
-            <button type="button" onclick="proceedToPay()">Continue to Payment</button>
+            <p style="margin-top: 20px; color: #4f3a3a;">Total Selected: <strong id="total-amount">$0</strong></p>
+            <button type="button" onclick="proceedToPay()" style="background-color: #4f3a3a; color: white; border: none; padding: 10px 20px; cursor: pointer;">Proceed to Payment</button>
         </form>
     </section>
-    <footer>
-        <p>&copy; 2025 Create and Uplift</p>
+    <footer style="background-color: #e8d5c3; color: #4f3a3a; text-align: center; padding: 10px;">
+        <p style="font-family: 'Quicksand', sans-serif;">&copy; 2025 Create and Uplift</p>
     </footer>
 
     <script>
@@ -67,7 +86,6 @@
         function proceedToPay() {
             if (parseFloat(totalAmount.textContent.slice(1)) > 0) {
                 alert('Proceeding to payment page...');
-                // Replace the following line with a navigation to the payment page
                 location.href = 'order-confirmation.html';
             } else {
                 alert('Please select at least one item to proceed.');
@@ -76,4 +94,3 @@
     </script>
 </body>
 </html>
-
