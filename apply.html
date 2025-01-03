@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Now - Create and Uplift</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+            color: #4f3a3a;
+        }
+
+        /* Header and Navigation */
+        nav {
+            background-color: #c69fa5;
+            padding: 15px 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #d65a77, #c69fa5);
+            font-size: 14px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background: linear-gradient(135deg, #d68c91, #c69fa5);
+        }
+
+        /* Main Section */
+        section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            text-align: center;
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+        /* Form Styles */
+        .form-container {
+            max-width: 600px;
+            margin: auto;
+            text-align: left;
+        }
+
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-container label {
+            font-size: 1rem;
+            color: #4f3a3a;
+        }
+
+        .form-container input, .form-container select, .form-container textarea {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 100%;
+        }
+
+        .form-container button {
+            padding: 15px 30px;
+            background-color: #d65a77;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #d68c91;
+        }
+
+        footer {
+            background-color: #e8d5c3;
+            color: #4f3a3a;
+            text-align: center;
+            padding: 20px;
+            font-size: 16px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="partners.html">Partners Page</a></li>
+            <li><a href="partner-with-us.html">Partner with Us</a></li>
+            <li><a href="cart.html">Shopping Cart</a></li>
+            <li><a href="small-business-portal.html">Small Business Portal</a></li>
+            <li><a href="apply-now.html">Apply Now</a></li>
+        </ul>
+    </nav>
+
+    <!-- Apply Now Section -->
+    <section>
+        <h2>Apply Now</h2>
+        <p>Looking for a new opportunity? Apply to work with Create and Uplift or one of our valued partners, Sacred Shine or MidLife Motors. Fill out the form below to get started!</p>
+
+        <div class="form-container">
+            <form action="#">
+                <label for="company">Select the Company You're Applying For:</label>
+                <select id="company" name="company" required>
+                    <option value="">Choose a Company</option>
+                    <option value="Create and Uplift">Create and Uplift</option>
+                    <option value="Sacred Shine">Sacred Shine</option>
+                    <option value="MidLife Motors">MidLife Motors</option>
+                </select>
+
+                <label for="position">Position You're Applying For:</label>
+                <input type="text" id="position" name="position" placeholder="e.g., Graphic Designer, Cleaner, Mechanic" required>
+
+                <label for="resume">Upload Your Resume (PDF, DOCX):</label>
+                <input type="file" id="resume" name="resume" accept=".pdf,.docx" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="yourname@example.com" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required>
+
+                <label for="message">Additional Message (Optional):</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell us more about yourself..."></textarea>
+
+                <button type="submit">Submit Application</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Create and Uplift | Designed with passion and precision.</p>
+    </footer>
+
+</body>
+</html>
