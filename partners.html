@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partners - Create and Uplift</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+            color: #4f3a3a;
+        }
+
+        /* Header and Navigation */
+        nav {
+            background-color: #c69fa5;
+            padding: 15px 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            text-align: center;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #d65a77, #c69fa5);
+            font-size: 14px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background: linear-gradient(135deg, #d68c91, #c69fa5);
+        }
+
+        /* Main Section */
+        section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .partners-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .partner-card {
+            background: linear-gradient(135deg, #ffffff, #f9f4ef);
+            border: 1px solid #ddd;
+            padding: 30px;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .partner-card:hover {
+            background-color: #f0c7d3;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .partner-card h3 {
+            color: #d65a77;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .partner-card p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .partner-card button {
+            padding: 15px 30px;
+            background-color: #d65a77;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .partner-card button:hover {
+            background-color: #d68c91;
+        }
+
+        /* Cart Section */
+        .cart {
+            margin-top: 30px;
+        }
+
+        .cart label, .cart select {
+            font-size: 1.1rem;
+        }
+
+        .cart button {
+            padding: 12px 20px;
+            background-color: #d65a77;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .cart button:hover {
+            background-color: #d68c91;
+        }
+
+        .cart p {
+            font-size: 1.1rem;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="partners.html">Partners Page</a></li>
+            <li><a href="partner-with-us.html">Partner with Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Partners Section -->
+    <section>
+        <h2>Our Current Partners</h2>
+        <div class="partners-container">
+            <!-- Sacred Shine Card -->
+            <div class="partner-card">
+                <h3>Sacred Shine</h3>
+                <p><strong>Services:</strong> Deep Clean, Standard Clean</p>
+                <p><strong>Pricing:</strong> $50/hr (Deep Clean), $40/hr (Standard Clean)</p>
+
+                <!-- Shopping Cart for Sacred Shine -->
+                <div class="cart">
+                    <label for="sacred-service">Select Service:</label>
+                    <select id="sacred-service">
+                        <option value="0">Select Service</option>
+                        <option value="50">Deep Clean ($50/hr)</option>
+                        <option value="40">Standard Clean ($40/hr)</option>
+                    </select>
+                    <button onclick="calculateSacredTotal()">Add to Cart</button>
+                    <p>Total: $<span id="sacred-total">0</span></p>
+                </div>
+            </div>
+
+            <!-- MidLife Motors Card -->
+            <div class="partner-card">
+                <h3>MidLife Motors</h3>
+                <p><strong>Services:</strong> Automobile Photo Shoot, Oil Change, and More</p>
+                <p><strong>Pricing:</strong> $50 (Photo Shoot), $30 (Oil Change)</p>
+
+                <!-- Shopping Cart for MidLife Motors -->
+                <div class="cart">
+                    <label for="midlife-service">Select Service:</label>
+                    <select id="midlife-service">
+                        <option value="0">Select Service</option>
+                        <option value="50">Photo Shoot ($50)</option>
+                        <option value="30">Oil Change ($30)</option>
+                    </select>
+                    <button onclick="calculateMidLifeTotal()">Add to Cart</button>
+                    <p>Total: $<span id="midlife-total">0</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Create and Uplift | Designed with passion and precision.</p>
+    </footer>
+
+    <script>
+        function calculateSacredTotal() {
+            const service = document.getElementById('sacred-service').value;
+            document.getElementById('sacred-total').innerText = service;
+        }
+
+        function calculateMidLifeTotal() {
+            const service = document.getElementById('midlife-service').value;
+            document.getElementById('midlife-total').innerText = service;
+        }
+    </script>
+
+</body>
+</html>
